@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hrushikesh Kumbhare | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fefefe;
+      --text-color: #1a202c;
+      --accent: #2b6cb0;
+      --card-bg: #fff;
+    }
+    [data-theme="dark"] {
+      --bg-color: #1a202c;
+      --text-color: #f7fafc;
+      --accent: #63b3ed;
+      --card-bg: #2d3748;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.4s, color 0.4s;
+    }
+    header {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    nav h1 {
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin-left: 1.5rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+    }
+    #theme-toggle {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1.2rem;
+      margin-left: 1rem;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+    .intro-text {
+      flex: 1;
+    }
+    .intro-text h2 {
+      font-size: 2.8rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .intro-text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    .btn {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, background 0.3s;
+    }
+    .btn:hover {
+      background: #2c5282;
+      transform: scale(1.05);
+    }
+    .intro img {
+      width: 280px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 30px;
+    }
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .filter-buttons button {
+      margin: 0 10px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .filter-buttons button:hover {
+      background: #2c5282;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    footer {
+      background: var(--card-bg);
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .socials a {
+      color: var(--accent);
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <header>
+    <nav>
+      <h1>🚀 Hrushikesh Kumbhare</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+    </nav>
+  </header>
+
+  <section id="home" data-aos="fade-up">
+  <div class="intro">
+    <div class="intro-text">
+      <h2>Hi, I'm Hrushikesh 👋</h2>
+      <p>I’m an aspiring Software Engineer from NMIMS Shirpur with expertise in Android, Firebase, full-stack Java, Spring Boot, MVVM, and Flutter. Proficient in Java, Python, Kotlin, SQL, and experienced in building user-centric mobile apps and cloud-based systems. Passionate about continuous learning, I pursue certifications like Microsoft Data Analyst and upskill through LeetCode and Udemy. I thrive in collaborative environments and aim to contribute to impactful projects.</p>
+      <a href="assets/hrushikesh_resume.pdf" class="btn" download>Download Resume</a>
+    </div>
+    <img src="assets/hrushi_photo.jpg" alt="Hrushikesh" style="width:270px; border-radius:50%;" />
+
+
+ </div>
+</section>
+
+<section id="projects" data-aos="fade-up">
+  <h2 class="section-title">Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Outing Manager</h3>
+      <p>Android app developed using Java, Firebase, and MVVM to streamline student outing workflows. Includes warden dashboard and chatbot support.</p>
+    </div>
+    <div class="card">
+      <h3>EcomEra</h3>
+      <p>UI/UX prototype of an e-commerce platform designed using Figma with focus on usability and responsiveness.</p>
+    </div>
+    <div class="card">
+      <h3>Mingle – Food Ordering Website</h3>
+      <p>Responsive website using HTML, CSS, and JavaScript with dynamic menu and optimized loading.</p>
+    </div>
+    <div class="card">
+      <h3>Job Portal Application</h3>
+      <p>Mobile app built with Java and Firebase to streamline job applications, real-time sync, and clean UI.</p>
+    </div>
+    <div class="card">
+      <h3>IMDB Movie Recommendation System</h3>
+      <p>Data-driven system using Power BI and Excel to recommend personalized movie lists with insightful visuals.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" data-aos="fade-up">
+  <h2 class="section-title">Skills & Technologies</h2>
+  <div class="cards">
+    <div class="card"><h3>Languages</h3><p>Java, Python, C++, Kotlin, SQL, HTML, CSS, Dart</p></div>
+    <div class="card"><h3>Frameworks/Tools</h3><p>Spring Boot, Android SDK, Firebase, Flutter, Git, GitHub, Power BI, Figma</p></div>
+    <div class="card"><h3>Databases</h3><p>MySQL, Firebase Firestore</p></div>
+    <div class="card"><h3>Concepts</h3><p>DSA, OOP, DBMS, OS, Networking, SDLC, REST APIs, Agile</p></div>
+  </div>
+</section>
+
+<section id="about" data-aos="fade-up">
+  <h2 class="section-title">About Me</h2>
+  <p style="text-align:center; max-width:800px; margin:auto; font-size:1.05rem;">
+    I'm a dedicated and enthusiastic software developer with a strong foundation in data structures, algorithms, and UI/UX design. Through internships, academic work, and personal projects, I've built solutions across mobile apps, data analytics, and design. I thrive in collaborative environments and aim to craft impactful products that merge function with creativity.
+  </p>
+</section>
+
+<section id="contact" data-aos="fade-up">
+  <h2 class="section-title">Contact</h2>
+  <p style="text-align:center;">📩 Email me at <strong>hrushimkumbhare@gmail.com</strong></p>
+  <div class="socials" style="text-align:center; margin-top:15px;">
+    <a href="https://linkedin.com/in/hrushikumbhare" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/Hrushi-byte" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:hrushimkumbhare@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</section>
+
+  <footer>
+    <p>© 2025 Hrushikesh Kumbhare</p>
+  </footer>
+
+  <!-- AOS and theme toggle scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const theme = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', theme === 'light' ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
